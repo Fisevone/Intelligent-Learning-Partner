@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/tech_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 学习数据概览 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📊 AI学习数据分析"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/tech_primary"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- 基础统计 -->
+                <TextView
+                    android:id="@+id/tv_learning_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📚 今日学习: 2小时15分钟"
+                    android:textSize="14sp"
+                    android:textColor="@color/tech_text_primary"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_completion_rate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="✅ 完成率: 85%"
+                        android:textSize="14sp"
+                        android:textColor="@color/tech_text_primary" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_learning_time"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:progress="85"
+                        android:max="100" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_focus_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🎯 专注度: 78%"
+                        android:textSize="14sp"
+                        android:textColor="@color/tech_text_primary" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_focus_rate"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:progress="78"
+                        android:max="100" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_interaction_count"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="💬 互动: 23次"
+                        android:textSize="14sp"
+                        android:textColor="@color/tech_text_primary" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_interaction"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:progress="92"
+                        android:max="100" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- AI知识图谱分析 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🕸️ AI知识图谱分析"
+                    android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tech_text_primary" />
+
+                    <Button
+                        android:id="@+id/btn_build_knowledge_graph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="构建分析"
+                        android:textSize="12sp"
+                        android:background="@drawable/tech_button_background"
+                        android:textColor="@android:color/white"
+                        android:paddingHorizontal="16dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_knowledge_graph_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡 点击构建AI知识图谱分析"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_knowledge_nodes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_primary"
+                    android:background="@drawable/tech_surface_variant"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_recommended_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_accent"
+                    android:visibility="gone"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_personalized_insights"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- AI课堂氛围分析 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🎭 AI课堂氛围分析"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tech_text_primary" />
+
+                    <Button
+                        android:id="@+id/btn_analyze_atmosphere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="分析氛围"
+                        android:textSize="12sp"
+                        android:background="@drawable/tech_button_background"
+                        android:textColor="@android:color/white"
+                        android:paddingHorizontal="16dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_atmosphere_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎭 点击开始氛围分析"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_overall_mood"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_primary"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_atmosphere_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_secondary"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progress_atmosphere"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progress="0"
+                    android:max="100"
+                    android:visibility="gone"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_recommended_mood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_accent"
+                    android:visibility="gone"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_atmosphere_suggestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="11sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:background="@drawable/tech_surface_variant"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_intervention_alert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_error"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- AI学习报告生成 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📋 AI学习报告"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tech_text_primary" />
+
+                    <Button
+                        android:id="@+id/btn_generate_report"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="生成报告"
+                        android:textSize="12sp"
+                        android:background="@drawable/tech_button_background"
+                        android:textColor="@android:color/white"
+                        android:paddingHorizontal="16dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_report_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋 点击生成AI个性化学习报告"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_learning_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="11sp"
+                    android:textColor="@color/tech_text_primary"
+                    android:background="@drawable/tech_surface_variant"
+                    android:padding="12dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

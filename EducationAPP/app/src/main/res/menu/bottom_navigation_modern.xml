@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_modern"
+        android:title="课堂" />
+    
+    <item
+        android:id="@+id/nav_ai_teacher"
+        android:icon="@drawable/ic_ai_teacher_modern"
+        android:title="AI助手" />
+    
+    <item
+        android:id="@+id/nav_collaboration"
+        android:icon="@drawable/ic_collaboration_modern"
+        android:title="协作" />
+    
+    <item
+        android:id="@+id/nav_analysis"
+        android:icon="@drawable/ic_analysis_modern"
+        android:title="分析" />
+    
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile_modern"
+        android:title="我的" />
+</menu>
+

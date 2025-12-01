@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EducationAPP"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <!-- 开屏动画页面 -->
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="false" />
+        
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP" />
+        
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP" />
+            
+        <activity
+            android:name=".ui.interaction.InteractionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP" />
+            
+        <activity
+            android:name=".ui.ai.AIChatActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP" />
+            
+        <activity
+            android:name=".ui.ai.SmartAnalysisActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP" />
+            
+        <activity
+            android:name=".ui.ai.AISmartQuestionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="AI智能出题" />
+            
+        <activity
+            android:name=".ui.ai.SubjectSelectionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="学科选择" />
+            
+        <activity
+            android:name=".ui.learning.LearningZoneActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="学习专区" />
+            
+        <activity
+            android:name=".ui.learning.VideoPlayerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="视频学习" />
+            
+        <activity
+            android:name=".ui.learning.ArticleReaderActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="文章学习" />
+            
+        <activity
+            android:name=".ui.learning.ExerciseActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="练习测验" />
+            
+        <activity
+            android:name=".ui.knowledge.KnowledgeGraphActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="知识图谱" />
+            
+        <activity
+            android:name=".ui.teacher.TeacherMainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="教师工作台" />
+            
+        <activity
+            android:name=".ui.teacher.ClassroomAtmosphereActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="课堂氛围分析" />
+            
+        <activity
+            android:name=".ui.teacher.ClassManagementActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="班级管理分析" />
+            
+        <activity
+            android:name=".ui.data.DataManagementActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="数据管理中心" />
+            
+        <activity
+            android:name=".ui.teacher.StudentProgressActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="学生进度分析" />
+            
+        <activity
+            android:name=".ui.teacher.QuestionManagementActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="题目管理" />
+            
+        <activity
+            android:name=".ui.teacher.TeachingAnalysisActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="教学分析报告" />
+            
+        <!-- 协作活动相关Activity -->
+        <activity
+            android:name=".ui.collaboration.GroupDiscussionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="小组讨论" />
+            
+        <activity
+            android:name=".ui.collaboration.GroupQuizActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="小组竞赛" />
+            
+        <!-- 学生端学习分析相关Activity -->
+        <activity
+            android:name=".ui.student.StudentLearningAnalysisActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="学习分析" />
+            
+        <activity
+            android:name=".ui.student.EmotionMonitoringActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="情绪监测" />
+            
+        <activity
+            android:name=".ui.student.LearningPredictionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="学习预测" />
+            
+        <!-- 教师端协作管理Activity -->
+        <activity
+            android:name=".ui.teacher.CollaborationManagementActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="协作管理" />
+            
+        <!-- 调试工具Activity -->
+        <activity
+            android:name=".debug.ApiTestActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EducationAPP"
+            android:label="API诊断工具" />
+    </application>
+
+</manifest>

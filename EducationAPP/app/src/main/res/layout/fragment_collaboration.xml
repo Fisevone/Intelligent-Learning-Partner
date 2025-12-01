@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/tech_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- AI智能分组 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="👥 AI智能分组"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tech_primary" />
+
+                    <Button
+                        android:id="@+id/btn_smart_grouping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="重新分组"
+                        android:textSize="12sp"
+                        android:background="@drawable/tech_button_background"
+                        android:textColor="@android:color/white"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <Button
+                        android:id="@+id/btn_manual_adjust"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="手动调整"
+                        android:textSize="12sp"
+                        android:background="@drawable/light_button_background"
+                        android:textColor="@color/tech_primary"
+                        android:paddingHorizontal="16dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_grouping_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📊 当前分组状态"
+                    android:textSize="14sp"
+                    android:textColor="@color/tech_text_primary"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_grouping_results"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="等待智能分组..."
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:background="@drawable/tech_surface_variant"
+                    android:padding="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_grouping_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💡 点击上方按钮开始AI智能分组"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_expected_outcomes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_accent"
+                    android:visibility="gone"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_potential_challenges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_warning"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 实时协作监控 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📊 实时协作监控"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tech_text_primary" />
+
+                    <Switch
+                        android:id="@+id/switch_collaboration_monitoring"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_monitoring_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👥 协作监控已启动"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- 整体协作评分 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_collaboration_score"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="协作总评: 85/100"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tech_text_primary" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_collaboration"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:progress="85"
+                        android:max="100" />
+
+                </LinearLayout>
+
+                <!-- 详细指标 -->
+                <TextView
+                    android:id="@+id/tv_communication_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💬 沟通活跃度: 85%"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_participation_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚖️ 参与均衡度: 80%"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_task_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📈 任务进度: 75%"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_collaboration_analysis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="11sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:background="@drawable/tech_surface_variant"
+                    android:padding="8dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 小组详细状态 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📈 各小组表现"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/tech_text_primary"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- 第1组 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="第1组"
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_primary" />
+
+                    <TextView
+                        android:id="@+id/tv_group1_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="85/100"
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_secondary"
+                        android:layout_marginEnd="8dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_group1"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:progress="85"
+                        android:max="100" />
+
+                </LinearLayout>
+
+                <!-- 第2组 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="第2组"
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_primary" />
+
+                    <TextView
+                        android:id="@+id/tv_group2_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="78/100"
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_secondary"
+                        android:layout_marginEnd="8dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_group2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:progress="78"
+                        android:max="100" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 协作活动控制 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎮 协作活动"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/tech_text_primary"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <Button
+                        android:id="@+id/btn_start_discussion"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="小组讨论"
+                        android:textSize="12sp"
+                        android:background="@drawable/tech_button_background"
+                        android:textColor="@android:color/white"
+                        android:layout_marginEnd="4dp" />
+
+                    <Button
+                        android:id="@+id/btn_group_poll"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="小组投票"
+                        android:textSize="12sp"
+                        android:background="@drawable/light_button_background"
+                        android:textColor="@color/tech_primary"
+                        android:layout_marginHorizontal="4dp" />
+
+                    <Button
+                        android:id="@+id/btn_peer_review"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="同伴评价"
+                        android:textSize="12sp"
+                        android:background="@drawable/light_button_background"
+                        android:textColor="@color/tech_primary"
+                        android:layout_marginStart="4dp" />
+
+                </LinearLayout>
+
+                <!-- 讨论区域 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_discussion_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💬 等待开始讨论"
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_secondary"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/tv_discussion_topic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_primary"
+                        android:visibility="gone"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/tv_discussion_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="11sp"
+                        android:textColor="@color/tech_text_secondary"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <!-- 投票区域 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_poll_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📊 等待发起投票"
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_secondary"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/tv_poll_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_primary"
+                        android:visibility="gone"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/tv_poll_options"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="11sp"
+                        android:textColor="@color/tech_text_secondary"
+                        android:visibility="gone"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/tv_poll_results"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="11sp"
+                        android:textColor="@color/tech_accent"
+                        android:background="@drawable/tech_surface_variant"
+                        android:padding="8dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <!-- 评价区域 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_review_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👥 等待启动同伴评价"
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_secondary"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/tv_review_criteria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="11sp"
+                        android:textColor="@color/tech_text_secondary"
+                        android:visibility="gone"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/tv_review_results"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="11sp"
+                        android:textColor="@color/tech_text_primary"
+                        android:background="@drawable/tech_surface_variant"
+                        android:padding="8dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+

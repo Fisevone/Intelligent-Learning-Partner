@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    
+    <!-- 背景圆形 -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M60,10 C32.4,10 10,32.4 10,60 C10,87.6 32.4,110 60,110 C87.6,110 110,87.6 110,60 C110,32.4 87.6,10 60,10 Z" />
+    
+    <!-- 渐变背景 -->
+    <path
+        android:fillColor="#66BB6A"
+        android:pathData="M60,15 C35.1,15 15,35.1 15,60 C15,84.9 35.1,105 60,105 C84.9,105 105,84.9 105,60 C105,35.1 84.9,15 60,15 Z" />
+    
+    <!-- 书本图标 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,40 L85,40 C87.2,40 89,41.8 89,44 L89,76 C89,78.2 87.2,80 85,80 L35,80 C32.8,80 31,78.2 31,76 L31,44 C31,41.8 32.8,40 35,40 Z" />
+    
+    <!-- 书本分页线 -->
+    <path
+        android:fillColor="#E8F5E8"
+        android:pathData="M60,40 L60,80 L85,80 C87.2,80 89,78.2 89,76 L89,44 C89,41.8 87.2,40 85,40 Z" />
+    
+    <!-- AI大脑图标 -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M45,50 C45,47.2 47.2,45 50,45 L70,45 C72.8,45 75,47.2 75,50 L75,60 C75,62.8 72.8,65 70,65 L50,65 C47.2,65 45,62.8 45,60 Z" />
+    
+    <!-- 神经网络连接点 -->
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M50,50 C51.1,50 52,51.1 52,52 C52,53.1 51.1,54 50,54 C48.9,54 48,53.1 48,52 C48,51.1 48.9,50 50,50 Z" />
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M60,53 C61.1,53 62,54.1 62,55 C62,56.1 61.1,57 60,57 C58.9,57 58,56.1 58,55 C58,54.1 58.9,53 60,53 Z" />
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M70,50 C71.1,50 72,51.1 72,52 C72,53.1 71.1,54 70,54 C68.9,54 68,53.1 68,52 C68,51.1 68.9,50 70,50 Z" />
+    
+    <!-- 连接线 -->
+    <path
+        android:strokeColor="#FF9800"
+        android:strokeWidth="1"
+        android:pathData="M52,52 L58,55 M62,55 L68,52" />
+    
+    <!-- 星星装饰 -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M25,25 L27,31 L33,31 L28,35 L30,41 L25,37 L20,41 L22,35 L17,31 L23,31 Z" />
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M95,25 L97,31 L103,31 L98,35 L100,41 L95,37 L90,41 L92,35 L87,31 L93,31 Z" />
+    
+    <!-- 底部文字装饰 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,85 Q60,90 80,85"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2" />
+</vector>

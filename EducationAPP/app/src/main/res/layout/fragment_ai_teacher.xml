@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/tech_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- AI老师个性选择 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_personality_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌟"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🎭 AI虚拟老师"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tech_primary" />
+
+                    <Button
+                        android:id="@+id/btn_change_personality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="切换个性"
+                        android:textSize="12sp"
+                        android:background="@drawable/tech_button_background"
+                        android:textColor="@android:color/white"
+                        android:paddingHorizontal="16dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_current_personality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前AI老师: 鼓励型"
+                    android:textSize="14sp"
+                    android:textColor="@color/tech_text_primary"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_personality_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="耐心温和，多鼓励少批评"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- AI老师会话区域 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="💬 智能对话"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tech_text_primary" />
+
+                    <TextView
+                        android:id="@+id/tv_session_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⏸️ 未开始"
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_secondary" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_start_session"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="开始会话"
+                    android:textSize="14sp"
+                    android:background="@drawable/tech_button_background"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- AI消息显示区 -->
+                <TextView
+                    android:id="@+id/tv_ai_teacher_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="👋 你好！我是你的AI老师。点击开始会话与我互动吧！"
+                    android:textSize="14sp"
+                    android:textColor="@color/tech_text_primary"
+                    android:background="@drawable/tech_chat_bubble_ai"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_interaction_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="💬 对话"
+                        android:textSize="12sp"
+                        android:textColor="@color/tech_text_secondary" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="参与度: "
+                            android:textSize="12sp"
+                            android:textColor="@color/tech_text_secondary" />
+
+                        <ProgressBar
+                            android:id="@+id/progress_engagement"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:progress="80"
+                            android:max="100" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_teaching_strategy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📋 教学策略: 等待会话开始"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_contextual_hints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💡 学习提示: 准备好开始学习吧！"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_accent"
+                    android:background="@drawable/tech_surface_variant"
+                    android:padding="8dp"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_suggested_responses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="建议回复:\n• 我理解了\n• 需要更多例子"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:background="@drawable/light_card_background"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_user_last_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_primary"
+                    android:background="@drawable/tech_chat_bubble_user"
+                    android:padding="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 交互控制区 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎮 互动控制"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/tech_text_primary"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/et_user_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="输入你的问题或回复..."
+                    android:textSize="14sp"
+                    android:background="@drawable/tech_input_background"
+                    android:padding="12dp"
+                    android:enabled="false"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_send_message"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="发送"
+                        android:textSize="12sp"
+                        android:background="@drawable/tech_button_background"
+                        android:textColor="@android:color/white"
+                        android:layout_marginEnd="4dp"
+                        android:enabled="false" />
+
+                    <Button
+                        android:id="@+id/btn_get_hint"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="要提示"
+                        android:textSize="12sp"
+                        android:background="@drawable/light_button_background"
+                        android:textColor="@color/tech_primary"
+                        android:layout_marginHorizontal="4dp"
+                        android:enabled="false" />
+
+                    <Button
+                        android:id="@+id/btn_ask_question"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="出题"
+                        android:textSize="12sp"
+                        android:background="@drawable/light_button_background"
+                        android:textColor="@color/tech_primary"
+                        android:layout_marginStart="4dp"
+                        android:enabled="false" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 知识探索区 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🧠 知识深度探索"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tech_text_primary" />
+
+                    <Button
+                        android:id="@+id/btn_explore_knowledge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="深度分析"
+                        android:textSize="12sp"
+                        android:background="@drawable/tech_button_background"
+                        android:textColor="@android:color/white"
+                        android:paddingHorizontal="16dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_knowledge_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡 点击上方按钮开始知识探索"
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_knowledge_exploration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/tech_text_primary"
+                    android:background="@drawable/tech_surface_variant"
+                    android:padding="8dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+

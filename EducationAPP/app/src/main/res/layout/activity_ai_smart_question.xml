@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tech_gradient_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- 标题栏 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/tech_surface"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:strokeColor="@color/tech_primary"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🤖 AI智能出题系统"
+                    android:textColor="@color/tech_primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="基于情绪识别的自适应出题，让学习更智能"
+                    android:textColor="@color/tech_text_secondary"
+                    android:textSize="14sp"
+                    android:gravity="center" />
+
+                <!-- 进度条 -->
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progress_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:indicatorColor="@color/tech_primary"
+                    app:trackColor="@color/tech_surface_variant" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 情绪状态卡片 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_emotion_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/tech_surface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/tech_accent"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🧠 实时学习状态监测"
+                    android:textColor="@color/tech_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_emotional_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="😐 分析中... AI正在识别你的学习状态"
+                    android:textColor="@color/tech_text_primary"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.3" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 题目卡片 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/tech_surface"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:strokeColor="@color/tech_primary"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- 题目标题 -->
+                <TextView
+                    android:id="@+id/tv_question_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📝 选择题 (中级)"
+                    android:textColor="@color/tech_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- 难度和时间信息 -->
+                <TextView
+                    android:id="@+id/tv_difficulty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="难度：中级 | 预计用时：60秒"
+                    android:textColor="@color/tech_text_secondary"
+                    android:textSize="12sp"
+                    android:background="@drawable/tech_tag_difficulty"
+                    android:padding="6dp" />
+
+                <!-- 题目内容 - 优化长文本显示 -->
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:maxHeight="400dp"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false">
+                    
+                    <TextView
+                        android:id="@+id/tv_question_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="AI正在为你生成个性化题目..."
+                        android:textColor="@color/tech_text_primary"
+                        android:textSize="16sp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:textIsSelectable="true"
+                        android:scrollHorizontally="false"
+                        android:singleLine="false"
+                        android:maxLines="50"
+                        android:ellipsize="none"
+                        android:padding="12dp"
+                        android:background="@drawable/question_content_background" />
+                        
+                </ScrollView>
+
+                <!-- 选项区域 -->
+                <RadioGroup
+                    android:id="@+id/radio_group_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+                    <!-- 选项将动态添加 -->
+                </RadioGroup>
+
+                <!-- 操作按钮 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_submit_answer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:text="提交答案"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@color/tech_primary"
+                        app:cornerRadius="8dp"
+                        app:icon="@drawable/ic_send"
+                        app:iconGravity="textStart" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_next_question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下一题"
+                        android:textColor="@color/tech_primary"
+                        app:backgroundTint="@color/tech_surface_variant"
+                        app:cornerRadius="8dp"
+                        app:icon="@drawable/ic_arrow_forward"
+                        app:iconGravity="textStart"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 解释和反馈卡片 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/tech_surface"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/tech_secondary"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡 AI智能解析"
+                    android:textColor="@color/tech_secondary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_explanation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="提交答案后，AI将为你提供详细的解析和学习建议"
+                    android:textColor="@color/tech_text_primary"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.4"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- AI功能说明 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/tech_surface_variant"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🚀 AI创新功能"
+                    android:textColor="@color/tech_primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="• 🧠 实时情绪识别：分析你的学习状态\n• 🎯 自适应难度：根据表现调整题目难度\n• 💡 个性化出题：结合你的学习历史\n• 🤖 智能干预：在需要时提供学习建议"
+                    android:textColor="@color/tech_text_secondary"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="1.3" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>
+

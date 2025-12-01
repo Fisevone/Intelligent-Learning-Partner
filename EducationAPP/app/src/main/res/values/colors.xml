@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主色调 -->
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#03DAC5</color>
+    
+    <!-- 背景色 -->
+    <color name="background_light">#F5F5F5</color>
+    <color name="background_dark">#121212</color>
+    <color name="black">#FF000000</color>
+    
+    <!-- 文本颜色 -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    
+    <!-- 进度条颜色 -->
+    <color name="progress_track">#E0E0E0</color>
+    
+    <!-- 情绪监测颜色 -->
+    <color name="focus_color">#4CAF50</color>
+    <color name="stress_color">#FF5722</color>
+    <color name="confidence_color">#2196F3</color>
+    <color name="fatigue_color">#9C27B0</color>
+    
+    <!-- 风险等级颜色 -->
+    <color name="risk_low">#4CAF50</color>
+    <color name="risk_medium">#FF9800</color>
+    <color name="risk_high">#F44336</color>
+    
+    <!-- 芯片背景色 -->
+    <color name="risk_chip_background">#FFEBEE</color>
+    
+    <!-- 情绪状态颜色 -->
+    <color name="emotion_positive">#E8F5E8</color>
+    <color name="emotion_neutral">#FFF8E1</color>
+    <color name="emotion_confused">#FFF3E0</color>
+    <color name="emotion_tired">#FFEBEE</color>
+    
+    <!-- 缺失的颜色定义 -->
+    <color name="white">#FFFFFF</color>
+    <color name="tech_secondary">#757575</color>
+    <color name="tech_primary">#2196F3</color>
+    <color name="tech_text_hint">#9E9E9E</color>
+    <color name="tech_background">#F5F5F5</color>
+    <color name="tech_text_primary">#212121</color>
+    <color name="tech_text_secondary">#757575</color>
+    <color name="transparent">#00000000</color>
+    <color name="tech_surface_elevated">#FFFFFF</color>
+    
+    <!-- 额外缺失的颜色 -->
+    <color name="primary_color">#2196F3</color>
+    <color name="tech_surface">#FFFFFF</color>
+    <color name="tech_primary_light">#64B5F6</color>
+    <color name="tech_primary_dark">#1976D2</color>
+    <color name="surface_color">#FFFFFF</color>
+    <color name="primary_light">#64B5F6</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary">#2196F3</color>
+    <color name="tech_secondary_dark">#424242</color>
+    
+    <!-- 更多缺失的颜色 -->
+    <color name="gradient_light_end">#E3F2FD</color>
+    <color name="tech_background_medium">#FAFAFA</color>
+    <color name="gradient_light_start">#BBDEFB</color>
+    <color name="gradient_tech_end">#1976D2</color>
+    <color name="gradient_tech_start">#2196F3</color>
+    <color name="tech_surface_variant">#F5F5F5</color>
+    <color name="tech_warning">#FF9800</color>
+    <color name="tech_secondary_light">#BDBDBD</color>
+    <color name="secondary_color">#03DAC5</color>
+    <color name="tech_success">#4CAF50</color>
+    <color name="tech_text_accent">#1976D2</color>
+    <color name="tech_accent">#03DAC5</color>
+    <color name="success_green">#4CAF50</color>
+    <color name="warning_orange">#FF9800</color>
+    
+    <!-- 最后一批缺失的颜色 -->
+    <color name="error_red">#F44336</color>
+    <color name="background_color">#F5F5F5</color>
+    <color name="text_hint">#9E9E9E</color>
+    <color name="error_color">#F44336</color>
+    <color name="success_color">#4CAF50</color>
+    <color name="accent">#03DAC5</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="success">#4CAF50</color>
+    
+    <!-- 最终缺失的颜色 -->
+    <color name="warning">#FF9800</color>
+    <color name="tech_error">#F44336</color>
+    <color name="emotion_focused">#4CAF50</color>
+    <color name="warning_color">#FF9800</color>
+    <color name="info_color">#2196F3</color>
+    <color name="emotion_happy">#4CAF50</color>
+</resources>

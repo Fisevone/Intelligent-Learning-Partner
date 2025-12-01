@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- 进度指示器 -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:visibility="gone"
+        app:indicatorColor="@color/primary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 标题卡片 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📊 数据管理中心"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="生成真实的学生和教师数据，用于测试和演示系统功能"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 统计信息卡片 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="📈 数据统计"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnRefreshStats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:text="刷新"
+                            android:textSize="12sp"
+                            app:icon="@android:drawable/ic_popup_sync"
+                            app:iconSize="16dp"
+                            style="@style/Widget.Material3.Button.TextButton.Icon" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvStatistics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="正在加载统计信息..."
+                        android:textSize="14sp"
+                        android:textColor="@color/text_primary"
+                        android:lineSpacingExtra="4dp"
+                        android:fontFamily="monospace"
+                        android:background="@drawable/gradient_background"
+                        android:padding="12dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 操作按钮组 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🛠️ 数据操作"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary"
+                        android:layout_marginBottom="16dp" />
+
+
+                    <!-- 生成学生数据 -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGenerateStudents"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="生成学生数据"
+                        android:textSize="16sp"
+                        app:icon="@android:drawable/ic_input_add"
+                        app:iconSize="24dp"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.Material3.Button.Icon" />
+
+                    <!-- 生成教师数据 -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGenerateTeachers"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="生成教师数据"
+                        android:textSize="16sp"
+                        app:icon="@android:drawable/ic_input_add"
+                        app:iconSize="24dp"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.Material3.Button.Icon" />
+
+                    <!-- 查看数据 -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnViewData"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="查看所有数据"
+                        android:textSize="16sp"
+                        app:icon="@android:drawable/ic_menu_view"
+                        app:iconSize="24dp"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.Material3.Button.OutlinedButton.Icon" />
+
+                    <!-- 清除数据 -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnClearData"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="清除所有数据"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/holo_red_dark"
+                        app:icon="@android:drawable/ic_menu_delete"
+                        app:iconSize="24dp"
+                        app:iconTint="@android:color/holo_red_dark"
+                        style="@style/Widget.Material3.Button.TextButton.Icon" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 使用说明 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/background_light">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="💡 使用说明"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• 生成学生数据：创建包含学习记录和进度的学生账户\n• 生成教师数据：创建具有教学经验的教师账户\n• 查看数据：预览生成的用户信息\n• 清除数据：删除所有生成的测试数据"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:lineSpacingExtra="2dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_message_system"
+        android:padding="8dp"
+        android:text="系统消息"
+        android:textColor="@color/tech_text_secondary"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:maxWidth="300dp" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="14:30"
+        android:textColor="@color/tech_text_hint"
+        android:textSize="10sp" />
+
+</LinearLayout>
+

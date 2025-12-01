@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/nav_qa"
+        android:icon="@drawable/ic_question_answer"
+        android:title="问答" />
+        
+    <item
+        android:id="@+id/nav_discussion"
+        android:icon="@drawable/ic_discussion"
+        android:title="讨论" />
+        
+    <item
+        android:id="@+id/nav_vote"
+        android:icon="@drawable/ic_vote"
+        android:title="投票" />
+        
+    <item
+        android:id="@+id/nav_quiz"
+        android:icon="@drawable/ic_quiz"
+        android:title="测验" />
+        
+</menu>

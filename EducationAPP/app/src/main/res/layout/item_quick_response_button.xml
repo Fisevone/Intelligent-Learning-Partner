@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="32dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/light_button_background"
+    android:textColor="@color/tech_primary"
+    android:textSize="12sp"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="4dp"
+    android:text="快速回复"
+    android:minWidth="80dp" />
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/student_gradient_background"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.main.MainActivity">
+
+    <!-- 主内容区域 -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp" />
+
+    <!-- 现代化底部导航栏 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_nav_background"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:elevation="16dp"
+        app:itemIconSize="28dp"
+        app:itemIconTint="@color/bottom_nav_color_modern"
+        app:itemTextColor="@color/bottom_nav_color_modern"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_modern" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
